@@ -8,10 +8,15 @@ export default function Home() {
 
   const navigation = useNavigation();
 
+
+  function navegaSobre(){navigation.navigate('Sobre', { nome: 'Matheus', email: 'Matheus@teste.com' })}
+  function navegaContato(){navigation.navigate('Contato', { nome: 'Matheus', email: 'Matheus@teste.com' })}
+
   return (
     <View style={styles.container}>
       <Text>Rodrigo Home page</Text>
-      <Button title="Ir para sobre " onPress={() => navigation.navigate('Sobre') }/>
+      <Button title="Ir para sobre" onPress={navegaSobre}/>
+      <Button title="Ir para Contato" onPress={navegaContato}/>
     </View>
   )
 }
